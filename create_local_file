@@ -1,0 +1,21 @@
+#Creating local file using terra :
+#Create folder : terra_practice 
+		#cd  terra_practice 
+# terraform init 
+#Vim  main.tf 
+
+resource "local_file" "demofile"{
+       		 filename = "/home/ubuntu/terra_pactice/demo.txt"
+       		 content = " this file is created with terraform  "
+}
+
+# or use this code using provisioner 
+resource "null_resource" "example" {
+  provisioner "local-exec" {
+    command = "echo 'Hello, World!' > output.txt"
+  }
+}
+#== terraform plan 
+#==terraform apply 
+
+#Output : demo.txt file will be created 
