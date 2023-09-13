@@ -1,1 +1,26 @@
+for executing given code you need to configuer aws 
+1. go to IAM 
+2. create user 
+3. generate access keys 
+4. connect this user with your account (it can be aws ec2 or your local )
+5.download aws cli 
+                    - sudo apt install awacli
+6. open terminal - aws configure 
+                 access key :
+                 secrete access key :
+6. then if you will do - terraform init the your aws account and your user will be connected and 
+terraform will get plugings from providers.tf file
+7. terraform plan 
+8 terraform apply 
 
+Done your infrastrure will be created 
+9. you can wind up all created resources by using 
+ -  terraform destroy 
+
+----------------------------------------------------------
+for getting access key 
+- cd 
+- cd ./ssh
+- ssh-keygen
+- pwd  (copy path )
+- path/key-name.pub will be added in file for public key  
